@@ -209,3 +209,5 @@ __marimo__/
 
 # Extra Files
 Report_References.docx
+src
+Data/vector_store
