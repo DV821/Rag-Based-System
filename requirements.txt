@@ -19,3 +19,5 @@ pypdf
 pymupdf
 unstructured
 docx2txt
+langchain_groq
+flask
