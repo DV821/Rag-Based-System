@@ -18,12 +18,12 @@ st.title("🧠 RAG Query Interface")
 # Sidebar config
 st.sidebar.header("⚙️ Configuration")
 model = st.sidebar.selectbox("Model Provider", ["openai", "groq"])
-model_name = st.sidebar.selectbox("Model Name", ["gpt-4o", "llama3-8b", "mixtral-8x7b"])
+
+model_name = ['gpt-4o' if model == 'openai' else "llama-3.1-8b-instant"][0]
 use_advanced = st.sidebar.checkbox("Use AdvancedRAGPipeline", value=True)
-use_openai_embed = st.sidebar.checkbox("Use OpenAI Embeddings", value=True)
 
 @st.cache_resource
-def initialize_pipeline(model, model_name, use_openai_embed):
+def initialize_pipeline(model, model_name, use_openai_embed = False):
     embedding_manager = EmbeddingManager(use_openai=use_openai_embed)
     vector_store = VectorStore(collection_name="docs", persist_directory="vector_store")
 
@@ -43,7 +43,7 @@ def initialize_pipeline(model, model_name, use_openai_embed):
 query = st.text_area("🔍 Enter your query", height=100)
 
 if st.button("Run RAG"):
-    retriever, llm = initialize_pipeline(model, model_name, use_openai_embed)
+    retriever, llm = initialize_pipeline(model, model_name)
 
     if use_advanced:
         answer_llm = ChatOpenAI(model_name="gpt-4o", temperature=0.1, max_tokens=1024)

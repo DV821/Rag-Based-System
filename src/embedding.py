@@ -59,7 +59,7 @@ class EmbeddingManager:
         if self.use_openai:
             embeddings = self.model.embed_documents(texts)
         else:
-            embeddings = self.model.embed_documents(texts)
+            embeddings = self.model.encode(texts)
 
         print(f"Generated embeddings for {len(embeddings)} texts.")
         return embeddings

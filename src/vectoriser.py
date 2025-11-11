@@ -82,6 +82,15 @@ class VectorStore:
         except Exception as e:
             print(f"Error adding documents to vector store: {e}")
             raise
+    
+    def has_documents(self) -> bool:
+        """Check if the vector store has any documents"""
+        try:
+            return self.collection.count() > 0
+        except Exception as e:
+            print(f"Error checking document count: {e}")
+            return False
+
 
 
 if __name__ == '__main__':
