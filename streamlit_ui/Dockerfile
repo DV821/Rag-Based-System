@@ -1,4 +1,4 @@
-FROM python:3.11.9-slim
+FROM python:3.11-slim
 WORKDIR /app
 COPY ../src /app/src
 COPY streamlit_ui.py /app
