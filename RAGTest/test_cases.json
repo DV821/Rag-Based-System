@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "query": "What is the Transformer architecture?",
+    "expected_answer": "The Transformer is a neural network architecture based solely on attention mechanisms, eliminating recurrence and convolutions.",
+    "source": "Attention Is All You Need",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 2,
+    "query": "Why is multi-head attention beneficial in the Transformer?",
+    "expected_answer": "Multi-head attention allows the model to attend to information from different representation subspaces at different positions.",
+    "source": "Attention Is All You Need",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 3,
+    "query": "How does the Transformer handle positional information?",
+    "expected_answer": "It uses sinusoidal positional encodings added to input embeddings to capture token order.",
+    "source": "Attention Is All You Need",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 4,
+    "query": "Compare the computational complexity of self-attention vs recurrent layers.",
+    "expected_answer": "Self-attention has O(n²·d) complexity per layer but allows O(1) sequential operations, unlike recurrent layers which require O(n).",
+    "source": "Attention Is All You Need",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 5,
+    "query": "What BLEU score did the Transformer achieve on English-to-German translation?",
+    "expected_answer": "The Transformer achieved a BLEU score of 28.4 on the WMT 2014 English-to-German task.",
+    "source": "Attention Is All You Need",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 6,
+    "query": "What are the four risk categories in the EU AI Act?",
+    "expected_answer": "Unacceptable, high-risk, limited-risk, and minimal-risk AI systems.",
+    "source": "EU AI Act Doc",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 7,
+    "query": "What obligations do providers of high-risk AI systems have?",
+    "expected_answer": "They must implement risk management, data governance, documentation, record-keeping, human oversight, and cybersecurity.",
+    "source": "EU AI Act Doc",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 8,
+    "query": "What types of AI systems are prohibited under the AI Act?",
+    "expected_answer": "Systems involving social scoring, emotion recognition in schools, untargeted facial recognition scraping, and manipulative techniques.",
+    "source": "EU AI Act Doc",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 9,
+    "query": "What defines a GPAI model with systemic risk?",
+    "expected_answer": "A GPAI model trained with over 10²⁵ FLOPs or deemed high-impact by the Commission.",
+    "source": "EU AI Act Doc",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 10,
+    "query": "What is the role of the AI Office in the EU AI Act?",
+    "expected_answer": "The AI Office monitors compliance, investigates systemic risks, and handles complaints against GPAI providers.",
+    "source": "EU AI Act Doc",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 11,
+    "query": "What is DeepSeek-R1-Zero?",
+    "expected_answer": "A model trained via reinforcement learning without supervised fine-tuning, showing emergent reasoning capabilities.",
+    "source": "DeepSeek-R1",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 12,
+    "query": "What is GRPO and how is it used in DeepSeek-R1?",
+    "expected_answer": "Group Relative Policy Optimization is an RL algorithm that estimates baselines from group scores without a critic model.",
+    "source": "DeepSeek-R1",
+    "difficulty": "Hard"
+  },
+  {
+    "id": 13,
+    "query": "How does DeepSeek-R1 handle language mixing in outputs?",
+    "expected_answer": "It introduces a language consistency reward during RL to encourage outputs in a single target language.",
+    "source": "DeepSeek-R1",
+    "difficulty": "Medium"
+  },
+  {
+    "id": 14,
+    "query": "What is the training format used in DeepSeek-R1-Zero?",
+    "expected_answer": "The model outputs reasoning in <think> tags and the final answer in <answer> tags.",
+    "source": "DeepSeek-R1",
+    "difficulty": "Easy"
+  },
+  {
+    "id": 15,
+    "query": "How does DeepSeek-R1 distill reasoning into smaller models?",
+    "expected_answer": "It uses reasoning data to fine-tune smaller dense models like Qwen and Llama, achieving strong benchmark results.",
+    "source": "DeepSeek-R1",
+    "difficulty": "Medium"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "query": "What is the Transformer architecture?",
+    "expected_answer": "The Transformer is a neural network architecture based entirely on attention mechanisms, eliminating recurrence and convolution.",
+    "source": "Attention_is_all_you_need.pdf",
+    "difficulty": "medium"
+  },
+  {
+    "id": 2,
+    "query": "Why is self-attention preferred over recurrence in Transformers?",
+    "expected_answer": "Self-attention enables parallelization and shorter path lengths for learning long-range dependencies, improving efficiency and scalability.",
+    "source": "Attention_is_all_you_need.pdf",
+    "difficulty": "hard"
+  },
+  {
+    "id": 3,
+    "query": "What is multi-head attention?",
+    "expected_answer": "Multi-head attention allows the model to attend to information from different representation subspaces simultaneously.",
+    "source": "Attention_is_all_you_need.pdf",
+    "difficulty": "medium"
+  },
+  {
+    "id": 4,
+    "query": "What are the key obligations for providers of high-risk AI systems under the EU AI Act?",
+    "expected_answer": "Providers must implement risk management, data governance, technical documentation, human oversight, and ensure accuracy and cybersecurity.",
+    "source": "EU AI Act Doc.docx",
+    "difficulty": "hard"
+  },
+  {
+    "id": 5,
+    "query": "What types of AI systems are prohibited under the EU AI Act?",
+    "expected_answer": "Prohibited systems include those using manipulative techniques, social scoring, emotion inference in schools or workplaces, and untargeted facial recognition.",
+    "source": "EU AI Act Doc.docx",
+    "difficulty": "hard"
+  },
+  {
+    "id": 6,
+    "query": "What is DeepSeek-R1-Zero and how is it trained?",
+    "expected_answer": "DeepSeek-R1-Zero is a reasoning model trained purely via reinforcement learning without supervised fine-tuning.",
+    "source": "New Text Document.txt",
+    "difficulty": "medium"
+  },
+  {
+    "id": 7,
+    "query": "How does DeepSeek-R1 improve upon DeepSeek-R1-Zero?",
+    "expected_answer": "DeepSeek-R1 uses cold-start supervised data and multi-stage RL to enhance readability and reasoning performance.",
+    "source": "New Text Document.txt",
+    "difficulty": "hard"
+  },
+  {
+    "id": 8,
+    "query": "What is the role of cold-start data in DeepSeek-R1 training?",
+    "expected_answer": "Cold-start data provides readable, structured reasoning examples that stabilize early RL training and improve model alignment.",
+    "source": "New Text Document.txt",
+    "difficulty": "medium"
+  },
+  {
+    "id": 9,
+    "query": "What benchmarks demonstrate DeepSeek-R1’s performance?",
+    "expected_answer": "DeepSeek-R1 achieves top scores on AIME, MATH-500, Codeforces, MMLU, and GPQA Diamond, rivaling OpenAI-o1-1217.",
+    "source": "New Text Document.txt",
+    "difficulty": "hard"
+  },
+  {
+    "id": 10,
+    "query": "What are the systemic risk obligations for GPAI providers under the EU AI Act?",
+    "expected_answer": "Systemic GPAI providers must conduct evaluations, adversarial testing, incident tracking, and ensure cybersecurity.",
+    "source": "EU AI Act Doc.docx",
+    "difficulty": "hard"
+  }
+]

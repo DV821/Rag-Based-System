@@ -1,0 +1,257 @@
+[
+  {
+    "id": 1,
+    "query": "What is the Transformer architecture?",
+    "expected_answer": "The Transformer is a neural network architecture based solely on attention mechanisms, eliminating recurrence and convolutions.",
+    "generated_answer": "The Transformer architecture is a model that relies entirely on an attention mechanism to establish global dependencies between input and output, eschewing recurrence and convolutional neural networks. It allows for significant parallelization, which reduces training time. The architecture consists of an encoder and a decoder, both using stacked self-attention and point-wise, fully connected layers. The encoder is composed of six identical layers, each with a multi-head self-attention mechanism and a position-wise fully connected feed-forward network. Residual connections and layer normalization are employed around each sub-layer, with all sub-layers and embedding layers producing outputs of dimension 512. The Transformer has demonstrated superior performance in machine translation tasks, achieving high BLEU scores with less training time compared to previous models.",
+    "source": "Attention Is All You Need",
+    "difficulty": "Easy",
+    "max_min_relevance": [
+      0.7187061011791229,
+      0.676839679479599
+    ],
+    "avg_relevance": 0.704,
+    "accuracy": 0.0,
+    "coverage": 0.189,
+    "hallucination": true,
+    "fluency": 1.0
+  },
+  {
+    "id": 2,
+    "query": "Why is multi-head attention beneficial in the Transformer?",
+    "expected_answer": "Multi-head attention allows the model to attend to information from different representation subspaces at different positions.",
+    "generated_answer": "Multi-head attention is beneficial in the Transformer because it allows the model to jointly attend to information from different representation subspaces at different positions. This is achieved by using multiple attention heads, which prevents the averaging effect that would occur with a single attention head. By employing multiple heads, the Transformer can capture more nuanced patterns and dependencies in the data, enhancing its ability to model complex sequences. Additionally, the use of multiple heads with reduced dimensions keeps the computational cost similar to that of single-head attention with full dimensionality.",
+    "source": "Attention Is All You Need",
+    "difficulty": "Medium",
+    "max_min_relevance": [
+      0.7326958179473877,
+      0.7052124440670013
+    ],
+    "avg_relevance": 0.727,
+    "accuracy": 0.0,
+    "coverage": 0.332,
+    "hallucination": true,
+    "fluency": 1.0
+  },
+  {
+    "id": 3,
+    "query": "How does the Transformer handle positional information?",
+    "expected_answer": "It uses sinusoidal positional encodings added to input embeddings to capture token order.",
+    "generated_answer": "The Transformer handles positional information using sinusoidal positional encoding. This method is used to incorporate information about the position of each element in the sequence, as the Transformer architecture itself does not inherently capture positional information due to its reliance on self-attention mechanisms. The context also mentions an experiment where sinusoidal positional encoding was replaced with learned positional embeddings, which resulted in nearly identical performance to the base model.",
+    "source": "Attention Is All You Need",
+    "difficulty": "Medium",
+    "max_min_relevance": [
+      0.6098856925964355,
+      0.5911890864372253
+    ],
+    "avg_relevance": 0.606,
+    "accuracy": 0.0,
+    "coverage": 0.252,
+    "hallucination": true,
+    "fluency": 1.0
+  },
+  {
+    "id": 4,
+    "query": "Compare the computational complexity of self-attention vs recurrent layers.",
+    "expected_answer": "Self-attention has O(n\u00b2\u00b7d) complexity per layer but allows O(1) sequential operations, unlike recurrent layers which require O(n).",
+    "generated_answer": "Self-attention layers have a computational advantage over recurrent layers in terms of complexity. Self-attention layers connect all positions with a constant number of sequentially executed operations, allowing for greater parallelization. In contrast, recurrent layers require O(n) sequential operations, making them less efficient for long sequences. Therefore, self-attention layers are faster than recurrent layers when dealing with long sequences due to their ability to parallelize computations more effectively.",
+    "source": "Attention Is All You Need",
+    "difficulty": "Hard",
+    "max_min_relevance": [
+      0.80901999771595,
+      0.7103787064552307
+    ],
+    "avg_relevance": 0.758,
+    "accuracy": 0.0,
+    "coverage": 0.342,
+    "hallucination": true,
+    "fluency": 1.0
+  },
+  {
+    "id": 5,
+    "query": "What BLEU score did the Transformer achieve on English-to-German translation?",
+    "expected_answer": "The Transformer achieved a BLEU score of 28.4 on the WMT 2014 English-to-German task.",
+    "generated_answer": "The Transformer achieved a BLEU score of 28.4 on the English-to-German translation task.",
+    "source": "Attention Is All You Need",
+    "difficulty": "Easy",
+    "max_min_relevance": [
+      0.7814997881650925,
+      0.7603116929531097
+    ],
+    "avg_relevance": 0.774,
+    "accuracy": 1.0,
+    "coverage": 0.879,
+    "hallucination": true,
+    "fluency": 1.0
+  },
+  {
+    "id": 6,
+    "query": "What are the four risk categories in the EU AI Act?",
+    "expected_answer": "Unacceptable, high-risk, limited-risk, and minimal-risk AI systems.",
+    "generated_answer": "The context provided does not specify four distinct risk categories in the EU AI Act. It mentions three categories: unacceptable risk, high-risk, and limited risk AI systems. Unacceptable risk AI systems are prohibited, high-risk AI systems are regulated, and limited risk AI systems are subject to lighter transparency obligations.",
+    "source": "EU AI Act Doc",
+    "difficulty": "Easy",
+    "max_min_relevance": [
+      0.7241563200950623,
+      0.71546670794487
+    ],
+    "avg_relevance": 0.72,
+    "accuracy": 0.0,
+    "coverage": 0.246,
+    "hallucination": true,
+    "fluency": 1.0
+  },
+  {
+    "id": 7,
+    "query": "What obligations do providers of high-risk AI systems have?",
+    "expected_answer": "They must implement risk management, data governance, documentation, record-keeping, human oversight, and cybersecurity.",
+    "generated_answer": "Providers of high-risk AI systems have several obligations according to the context provided. They must comply with additional requirements as these systems are considered 'high risk' under the AI Act. The majority of obligations fall on these providers (developers), especially those intending to place on the market or put into service high-risk AI systems. They are required to ensure transparency by making end-users aware that they are interacting with AI, such as in the case of chatbots and deepfakes. Additionally, they must provide technical documentation, instructions for use, comply with the Copyright Directive, and publish a summary about the content used for training.",
+    "source": "EU AI Act Doc",
+    "difficulty": "Medium",
+    "max_min_relevance": [
+      0.7521272301673889,
+      0.749271035194397
+    ],
+    "avg_relevance": 0.751,
+    "accuracy": 0.0,
+    "coverage": 0.199,
+    "hallucination": true,
+    "fluency": 1.0
+  },
+  {
+    "id": 8,
+    "query": "What types of AI systems are prohibited under the AI Act?",
+    "expected_answer": "Systems involving social scoring, emotion recognition in schools, untargeted facial recognition scraping, and manipulative techniques.",
+    "generated_answer": "The AI Act prohibits AI systems that deploy subliminal, manipulative, or deceptive techniques to distort behavior and impair informed decision-making, causing significant harm. Additionally, AI systems that present an unacceptable risk, such as social scoring systems and manipulative AI, are also prohibited.",
+    "source": "EU AI Act Doc",
+    "difficulty": "Medium",
+    "max_min_relevance": [
+      0.7723648846149445,
+      0.7068262994289398
+    ],
+    "avg_relevance": 0.74,
+    "accuracy": 0.0,
+    "coverage": 0.257,
+    "hallucination": true,
+    "fluency": 1.0
+  },
+  {
+    "id": 9,
+    "query": "What defines a GPAI model with systemic risk?",
+    "expected_answer": "A GPAI model trained with over 10\u00b2\u2075 FLOPs or deemed high-impact by the Commission.",
+    "generated_answer": "A GPAI model is defined as having systemic risk when the cumulative amount of compute used for its training exceeds 1025 floating point operations (FLOPs). Additionally, the Commission may determine a model has systemic risk if it has high impact capabilities, either on its own or through a qualified alert from a scientific panel of independent experts.",
+    "source": "EU AI Act Doc",
+    "difficulty": "Hard",
+    "max_min_relevance": [
+      0.7992612719535828,
+      0.6977737545967102
+    ],
+    "avg_relevance": 0.746,
+    "accuracy": 0.0,
+    "coverage": 0.247,
+    "hallucination": true,
+    "fluency": 1.0
+  },
+  {
+    "id": 10,
+    "query": "What is the role of the AI Office in the EU AI Act?",
+    "expected_answer": "The AI Office monitors compliance, investigates systemic risks, and handles complaints against GPAI providers.",
+    "generated_answer": "The role of the AI Office in the EU AI Act is to monitor the effective implementation and compliance of GPAI model providers. It sits within the Commission and can invite GPAI model providers, relevant national competent authorities, civil society, industry, academia, downstream providers, and independent experts to participate in drawing up codes. The AI Office also handles complaints from downstream providers regarding upstream providers' infringements and may conduct evaluations of the GPAI model to assess compliance, especially when the information gathered under its powers to request information is insufficient.",
+    "source": "EU AI Act Doc",
+    "difficulty": "Medium",
+    "max_min_relevance": [
+      0.7449516355991364,
+      0.6661704778671265
+    ],
+    "avg_relevance": 0.703,
+    "accuracy": 0.0,
+    "coverage": 0.248,
+    "hallucination": true,
+    "fluency": 1.0
+  },
+  {
+    "id": 11,
+    "query": "What is DeepSeek-R1-Zero?",
+    "expected_answer": "A model trained via reinforcement learning without supervised fine-tuning, showing emergent reasoning capabilities.",
+    "generated_answer": "DeepSeek-R1-Zero is a first-generation reasoning model introduced by DeepSeek-AI. It is trained via large-scale reinforcement learning (RL) without supervised fine-tuning (SFT) as a preliminary step. This model demonstrates remarkable reasoning capabilities and naturally emerges with numerous powerful and intriguing reasoning behaviors. However, it faces challenges such as poor readability and language mixing. Despite these challenges, DeepSeek-R1-Zero can achieve competitive performance on reasoning tasks, and its performance can be further enhanced through techniques like majority voting.",
+    "source": "DeepSeek-R1",
+    "difficulty": "Easy",
+    "max_min_relevance": [
+      0.7399828433990479,
+      0.7257052361965179
+    ],
+    "avg_relevance": 0.733,
+    "accuracy": 0.0,
+    "coverage": 0.298,
+    "hallucination": true,
+    "fluency": 1.0
+  },
+  {
+    "id": 12,
+    "query": "What is GRPO and how is it used in DeepSeek-R1?",
+    "expected_answer": "Group Relative Policy Optimization is an RL algorithm that estimates baselines from group scores without a critic model.",
+    "generated_answer": "GRPO is a reinforcement learning (RL) framework used in the development of DeepSeek-R1. It is employed to improve the model's performance in reasoning tasks. Specifically, GRPO is used in the training process of DeepSeek-R1-Zero, which is a precursor to DeepSeek-R1, allowing the model to naturally develop powerful reasoning behaviors through a pure RL process without any supervised data.",
+    "source": "DeepSeek-R1",
+    "difficulty": "Hard",
+    "max_min_relevance": [
+      0.6289353668689728,
+      0.588802844285965
+    ],
+    "avg_relevance": 0.609,
+    "accuracy": 0.0,
+    "coverage": 0.125,
+    "hallucination": true,
+    "fluency": 1.0
+  },
+  {
+    "id": 13,
+    "query": "How does DeepSeek-R1 handle language mixing in outputs?",
+    "expected_answer": "It introduces a language consistency reward during RL to encourage outputs in a single target language.",
+    "generated_answer": "DeepSeek-R1 is currently optimized for Chinese and English, which may result in language mixing issues when handling queries in other languages. For instance, DeepSeek-R1 might use English for reasoning and responses, even if the query is in a language other than English or Chinese. The developers aim to address this limitation in future updates.",
+    "source": "DeepSeek-R1",
+    "difficulty": "Medium",
+    "max_min_relevance": [
+      0.7261112332344055,
+      0.677638977766037
+    ],
+    "avg_relevance": 0.71,
+    "accuracy": 0.0,
+    "coverage": 0.213,
+    "hallucination": true,
+    "fluency": 1.0
+  },
+  {
+    "id": 14,
+    "query": "What is the training format used in DeepSeek-R1-Zero?",
+    "expected_answer": "The model outputs reasoning in <think> tags and the final answer in <answer> tags.",
+    "generated_answer": "The training format used in DeepSeek-R1-Zero involves designing a straightforward template that guides the base model to adhere to specified instructions. This template requires DeepSeek-R1-Zero to first produce a reasoning process, followed by the final answer. The constraints are limited to this structural format, avoiding any content-specific biases to accurately observe the model\u2019s natural progression during the reinforcement learning process.",
+    "source": "DeepSeek-R1",
+    "difficulty": "Easy",
+    "max_min_relevance": [
+      0.7023996412754059,
+      0.6919585764408112
+    ],
+    "avg_relevance": 0.699,
+    "accuracy": 0.0,
+    "coverage": 0.188,
+    "hallucination": true,
+    "fluency": 1.0
+  },
+  {
+    "id": 15,
+    "query": "How does DeepSeek-R1 distill reasoning into smaller models?",
+    "expected_answer": "It uses reasoning data to fine-tune smaller dense models like Qwen and Llama, achieving strong benchmark results.",
+    "generated_answer": "DeepSeek-R1 distills reasoning into smaller models by transferring the reasoning patterns of larger models into these smaller models. This process results in better performance compared to reasoning patterns discovered through reinforcement learning (RL) on small models. The reasoning data generated by DeepSeek-R1 is used to fine-tune several dense models, leading to distilled smaller dense models that perform exceptionally well on benchmarks. The open-source DeepSeek-R1 and its API facilitate this distillation process, benefiting the research community in developing better smaller models.",
+    "source": "DeepSeek-R1",
+    "difficulty": "Medium",
+    "max_min_relevance": [
+      0.8144691586494446,
+      0.7744493335485458
+    ],
+    "avg_relevance": 0.8,
+    "accuracy": 0.0,
+    "coverage": 0.212,
+    "hallucination": true,
+    "fluency": 1.0
+  }
+]
