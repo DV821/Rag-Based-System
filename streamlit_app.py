@@ -28,12 +28,12 @@ def initialize_pipeline(model, model_name, use_openai_embed):
     vector_store = VectorStore(collection_name="docs", persist_directory="vector_store")
 
     # Only embed and add documents if store is empty
-    if not vector_store.has_documents():
-        docs = load_all_documents("Data")
-        chunks = split_documents(docs)
-        texts = [doc.page_content for doc in chunks]
-        embeddings = embedding_manager.generate_embeddings(texts)
-        vector_store.add_documents(chunks, embeddings)
+    # if not vector_store.has_documents():
+    docs = load_all_documents("Data")
+    chunks = split_documents(docs)
+    texts = [doc.page_content for doc in chunks]
+    embeddings = embedding_manager.generate_embeddings(texts)
+    vector_store.add_documents(chunks, embeddings)
 
     retriever = RAGRetriever(vector_store, embedding_manager)
     llm = LLMManager(provider=model, model_name=model_name)
@@ -53,19 +53,21 @@ if st.button("Run RAG"):
         st.subheader("📘 Generated Answer")
         st.write(result["answer"])
 
-        st.subheader("📎 Retrieved Sources")
-        seen = set()
-        unique_sources = []
-        for src in result["sources"]:
-            key = (src["source"], src["page"])
-            if key not in seen:
-                seen.add(key)
-                unique_sources.append(src)
+        # st.subheader("📎 Retrieved Sources")
+        
+        # seen = set()
+        # unique_sources = []
+        # for src, page in result["sources"]:
+        #     print(src)
+        #     key = (src["source"], src["page"])
+        #     if key not in seen:
+        #         seen.add(key)
+        #         unique_sources.append(src)
 
-        for src in unique_sources:
-            filename = os.path.basename(src["source"])
-            st.markdown(f"- **{filename}** (page {src['page']})")
-
+        # for src, page in unique_sources:
+        #     filename = os.path.basename(src["source"])
+        #     st.markdown(f"- **{filename}** (page {page}))")
+            
         if result["summary"]:
             st.subheader("📝 Summary")
             st.write(result["summary"])
