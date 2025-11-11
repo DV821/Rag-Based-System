@@ -27,7 +27,6 @@ class LLMManager:
         keys = {
             "openai": os.getenv("OPENAI_API_KEY"),
             "groq": os.getenv("GROQ_API_KEY"),
-            "gemini": os.getenv("GEMINI_API_KEY")
         }
         key = keys.get(self.provider)
         if not key:
