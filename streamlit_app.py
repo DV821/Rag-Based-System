@@ -29,12 +29,12 @@ def initialize_pipeline(model, model_name, use_openai_embed = True):
     vector_store = VectorStore(collection_name="docs", persist_directory="vector_store")
 
     # Only embed and add documents if store is empty
-    if not vector_store.has_documents():
-        docs = load_all_documents("Data")
-        chunks = split_documents(docs)
-        texts = [doc.page_content for doc in chunks]
-        embeddings = embedding_manager.generate_embeddings(texts)
-        vector_store.add_documents(chunks, embeddings)
+    # if not vector_store.has_documents():
+    docs = load_all_documents("Data")
+    chunks = split_documents(docs)
+    texts = [doc.page_content for doc in chunks]
+    embeddings = embedding_manager.generate_embeddings(texts)
+    vector_store.add_documents(chunks, embeddings)
 
     retriever = RAGRetriever(vector_store, embedding_manager)
     llm = LLMManager(provider=model, model_name=model_name)
