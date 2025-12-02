@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "query": "What is the Transformer architecture?",
+    "expected_answer": "The Transformer is a neural network architecture based entirely on attention mechanisms, eliminating recurrence and convolution.",
+    "generated_answer": "The Transformer architecture is a model architecture that eschews recurrence and instead relies entirely on an attention mechanism to draw global dependencies between input and output. It follows an overall architecture using stacked self-attention and point-wise, fully connected layers for both the encoder and decoder.\n\nThe Transformer architecture consists of:\n\n- Encoder: A stack of N (6 in this case) identical layers, each with two sub-layers:\n  1. A multi-head self-attention mechanism\n  2. A simple, position-wise fully connected feed-forward network\n  Residual connections and layer normalization are employed around each sub-layer.\n\n- Decoder: Similar to the encoder, but the architecture is not fully described in the provided context.\n\nThe Transformer architecture allows for significantly more parallelization and can reach a new state of the art in translation quality after being trained for as little as twelve hours on eight P100 GPUs.",
+    "source": "Attention_is_all_you_need.pdf",
+    "difficulty": "medium",
+    "max_min_relevance": [
+      0.7187061011791229,
+      0.70197993516922
+    ],
+    "avg_relevance": 0.712,
+    "accuracy": 0.0,
+    "coverage": 0.191,
+    "hallucination_score": 0.145,
+    "fluency": 0.5
+  },
+  {
+    "id": 2,
+    "query": "Why is self-attention preferred over recurrence in Transformers?",
+    "expected_answer": "Self-attention enables parallelization and shorter path lengths for learning long-range dependencies, improving efficiency and scalability.",
+    "generated_answer": "Based on the provided context, self-attention is preferred over recurrence in Transformers because it allows modeling of dependencies without regard to their distance in the input or output sequences. This is in contrast to recurrent networks, which have a sequential nature that precludes parallelization within training examples, making it more difficult to learn dependencies between distant positions.\n\nAdditionally, the context mentions that self-attention has been successfully used in various tasks, including reading comprehension, abstractive summarization, textual entailment, and learning task-independent sentence representations. This suggests that self-attention is a powerful mechanism for modeling sequential data.\n\nHowever, it's worth noting that the context does not explicitly state why self-attention is preferred over recurrence in Transformers. Instead, it presents self-attention as a key component of the Transformer architecture, which eschews recurrence in favor of attention mechanisms.",
+    "source": "Attention_is_all_you_need.pdf",
+    "difficulty": "hard",
+    "max_min_relevance": [
+      0.7136554718017578,
+      0.709773987531662
+    ],
+    "avg_relevance": 0.712,
+    "accuracy": 0.0,
+    "coverage": 0.158,
+    "hallucination_score": 0.333,
+    "fluency": 0.5
+  },
+  {
+    "id": 3,
+    "query": "What is multi-head attention?",
+    "expected_answer": "Multi-head attention allows the model to attend to information from different representation subspaces simultaneously.",
+    "generated_answer": "Multi-head attention is a mechanism that allows a model to jointly attend to information from different representation subspaces at different positions. It is achieved by applying multiple attention heads in parallel, each with its own set of query, key, and value projections. This is in contrast to single-head attention, where averaging inhibits the ability to jointly attend to different subspaces.\n\nThe formula for multi-head attention is given by:\n\nMultiHead(Q, K, V) = Concat(head1, ..., headh)W O\n\nwhere headi = Attention(QW Q\ni , KW K\ni , V W V\ni )\n\nIn this formula, h is the number of parallel attention layers, or heads, and W Q\ni , W K\ni , and W V\ni are parameter matrices for each head. The output of multi-head attention is a concatenation of the outputs from each head, followed by a final projection matrix W O.\n\nIn the context of the Transformer model, multi-head attention is used in three different ways, including encoder-decoder attention layers, where the queries come from the previous decoder layer. The Transformer uses 8 parallel attention layers, or heads, with each head having a reduced dimension of 64. This allows the total computational cost to be similar to that of single-head attention with full dimensionality.",
+    "source": "Attention_is_all_you_need.pdf",
+    "difficulty": "medium",
+    "max_min_relevance": [
+      0.7446254789829254,
+      0.7005259990692139
+    ],
+    "avg_relevance": 0.727,
+    "accuracy": 0.0,
+    "coverage": 0.169,
+    "hallucination_score": 0.242,
+    "fluency": 0.5
+  },
+  {
+    "id": 4,
+    "query": "What are the key obligations for providers of high-risk AI systems under the EU AI Act?",
+    "expected_answer": "Providers must implement risk management, data governance, technical documentation, human oversight, and ensure accuracy and cybersecurity.",
+    "generated_answer": "Based on the provided context, the key obligations for providers of high-risk AI systems under the EU AI Act are:\n\n1. **Additional requirements**: Providers of high-risk AI systems will be subject to additional requirements, although the specific requirements are not explicitly stated in the provided context.\n2. **Classification rules**: High-risk AI systems are classified based on specific rules, including:\n\t* Use as a safety component or product covered by EU laws in Annex I, and required to undergo a third-party conformity assessment.\n\t* Use cases under Annex III, except if the AI system performs a narrow procedural task, improves the result of a previously completed human activity, or detects decision-making patterns without replacing or influencing human decision-making.\n3. **Technical documentation and instructions for use**: Providers of high-risk AI systems must provide technical documentation and instructions for use.\n4. **Compliance with EU laws and regulations**: Providers of high-risk AI systems must comply with EU laws and regulations, including those related to safety and conformity assessment.\n5. **Third-party conformity assessment**: High-risk AI systems may require third-party conformity assessment, depending on their use case and classification.\n\nPlease note that the provided context does not explicitly state all the obligations for providers of high-risk AI systems under the EU AI Act. For a comprehensive understanding, it is recommended to consult the full text of the AI Act or relevant EU regulations.",
+    "source": "EU AI Act Doc.docx",
+    "difficulty": "hard",
+    "max_min_relevance": [
+      0.7792865037918091,
+      0.768823504447937
+    ],
+    "avg_relevance": 0.775,
+    "accuracy": 0.0,
+    "coverage": 0.108,
+    "hallucination_score": 0.357,
+    "fluency": 0.5
+  },
+  {
+    "id": 5,
+    "query": "What types of AI systems are prohibited under the EU AI Act?",
+    "expected_answer": "Prohibited systems include those using manipulative techniques, social scoring, emotion inference in schools or workplaces, and untargeted facial recognition.",
+    "generated_answer": "According to the provided context, the following types of AI systems are prohibited under the EU AI Act:\n\nAI systems that deploy subliminal, manipulative, or deceptive techniques to distort behavior and impair informed decision-making, causing significant harm.\n\nThese prohibited AI systems aim to manipulate individuals' behavior and decision-making processes, leading to significant harm.",
+    "source": "EU AI Act Doc.docx",
+    "difficulty": "hard",
+    "max_min_relevance": [
+      0.7557988464832306,
+      0.7148259282112122
+    ],
+    "avg_relevance": 0.739,
+    "accuracy": 0.0,
+    "coverage": 0.314,
+    "hallucination_score": 0.333,
+    "fluency": 0.5
+  },
+  {
+    "id": 6,
+    "query": "What is DeepSeek-R1-Zero and how is it trained?",
+    "expected_answer": "DeepSeek-R1-Zero is a reasoning model trained purely via reinforcement learning without supervised fine-tuning.",
+    "generated_answer": "DeepSeek-R1-Zero is a first-generation reasoning model introduced by DeepSeek-AI. It is trained via large-scale reinforcement learning (RL) without a preliminary supervised fine-tuning (SFT) step. This means that DeepSeek-R1-Zero is trained directly through RL, allowing it to naturally emerge with powerful and intriguing reasoning behaviors. However, it encounters challenges such as poor readability and language mixing.",
+    "source": "New Text Document.txt",
+    "difficulty": "medium",
+    "max_min_relevance": [
+      0.7499214112758636,
+      0.7364918887615204
+    ],
+    "avg_relevance": 0.745,
+    "accuracy": 0.0,
+    "coverage": 0.39,
+    "hallucination_score": 0.129,
+    "fluency": 1.0
+  },
+  {
+    "id": 7,
+    "query": "How does DeepSeek-R1 improve upon DeepSeek-R1-Zero?",
+    "expected_answer": "DeepSeek-R1 uses cold-start supervised data and multi-stage RL to enhance readability and reasoning performance.",
+    "generated_answer": "DeepSeek-R1 improves upon DeepSeek-R1-Zero by utilizing Reinforcement Learning (RL) with human-friendly cold-start data. This approach aims to address the drawbacks of DeepSeek-R1-Zero, such as poor readability and language mixing, by training a user-friendly model that produces clear and coherent Chains of Thought (CoT) while maintaining strong reasoning capabilities.",
+    "source": "New Text Document.txt",
+    "difficulty": "hard",
+    "max_min_relevance": [
+      0.7344510853290558,
+      0.7310447096824646
+    ],
+    "avg_relevance": 0.733,
+    "accuracy": 0.0,
+    "coverage": 0.286,
+    "hallucination_score": 0.219,
+    "fluency": 1.0
+  },
+  {
+    "id": 8,
+    "query": "What is the role of cold-start data in DeepSeek-R1 training?",
+    "expected_answer": "Cold-start data provides readable, structured reasoning examples that stabilize early RL training and improve model alignment.",
+    "generated_answer": "According to the context, the role of cold-start data in DeepSeek-R1 training is to fine-tune the model as the initial RL actor. This is done to prevent the early unstable cold start phase of RL training from the base model. To collect this data, several approaches are explored, including using few-shot prompting, directly prompting models to generate detailed answers, gathering DeepSeek-R1-Zero outputs, and refining the results through post-processing by human annotators. The goal is to construct and collect a small amount of long CoT data to help the model start training more stably.",
+    "source": "New Text Document.txt",
+    "difficulty": "medium",
+    "max_min_relevance": [
+      0.812835693359375,
+      0.7724156826734543
+    ],
+    "avg_relevance": 0.797,
+    "accuracy": 0.0,
+    "coverage": 0.214,
+    "hallucination_score": 0.152,
+    "fluency": 1.0
+  },
+  {
+    "id": 9,
+    "query": "What benchmarks demonstrate DeepSeek-R1s performance?",
+    "expected_answer": "DeepSeek-R1 achieves top scores on AIME, MATH-500, Codeforces, MMLU, and GPQA Diamond, rivaling OpenAI-o1-1217.",
+    "generated_answer": "DeepSeek-R1 demonstrates its performance on the following benchmarks:\n\n1. Codeforces (achieving a 2,029 Elo rating)\n2. MMLU (achieving 90.8% score)\n3. MMLU-Pro (achieving 84.0% score)\n4. GPQA Diamond (achieving 71.5% score)\n5. SimpleQA (outperforming DeepSeek-V3)\n6. IF-Eval (assessing its ability to follow format instructions)\n7. AlpacaEval2.0 (indicating its strengths in writing tasks)\n8. ArenaHard (indicating its strengths in open-domain question answering)\n\nThese benchmarks showcase DeepSeek-R1's capabilities in coding-related tasks, educational tasks, writing tasks, and open-domain question answering.",
+    "source": "New Text Document.txt",
+    "difficulty": "hard",
+    "max_min_relevance": [
+      0.7530543804168701,
+      0.7445781826972961
+    ],
+    "avg_relevance": 0.75,
+    "accuracy": 0.0,
+    "coverage": 0.21,
+    "hallucination_score": 0.105,
+    "fluency": 0.5
+  },
+  {
+    "id": 10,
+    "query": "What are the systemic risk obligations for GPAI providers under the EU AI Act?",
+    "expected_answer": "Systemic GPAI providers must conduct evaluations, adversarial testing, incident tracking, and ensure cybersecurity.",
+    "generated_answer": "According to the provided context, GPAI model providers that present a systemic risk have the following obligations:\n\n1. **Notify the Commission**: They must notify the Commission within 2 weeks if their model meets the criterion of exceeding 1025 floating point operations (FLOPs) during training.\n2. **Perform model evaluations**: They must conduct and document adversarial testing to identify and mitigate systemic risk.\n3. **Assess and mitigate systemic risks**: They must assess and mitigate possible systemic risks, including their sources.\n4. **Track, document, and report serious incidents**: They must track, document, and report serious incidents and possible corrective measures to the AI Office and relevant national competent authorities without undue delay.\n\nThese obligations are in addition to the four general obligations for GPAI model providers, which include providing technical documentation, instructions for use, complying with the Copyright Directive, and publishing a summary about the content used for training.",
+    "source": "EU AI Act Doc.docx",
+    "difficulty": "hard",
+    "max_min_relevance": [
+      0.7903430759906769,
+      0.7886218130588531
+    ],
+    "avg_relevance": 0.79,
+    "accuracy": 0.0,
+    "coverage": 0.16,
+    "hallucination_score": 0.159,
+    "fluency": 0.5
+  }
+]

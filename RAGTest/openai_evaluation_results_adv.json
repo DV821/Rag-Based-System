@@ -3,152 +3,152 @@
     "id": 1,
     "query": "What is the Transformer architecture?",
     "expected_answer": "The Transformer is a neural network architecture based entirely on attention mechanisms, eliminating recurrence and convolution.",
-    "generated_answer": "The Transformer architecture, which uses an attention mechanism without recurrence or convolution for global dependencies, features an encoder-decoder structure with stacked self-attention and fully connected layers, enabling significant parallelization and achieving state-of-the-art results in tasks like machine translation.",
+    "generated_answer": "The Transformer architecture uses an attention mechanism without recurrence or convolutions, featuring encoder and decoder stacks with multi-head self-attention and feed-forward networks, enabling parallelization and state-of-the-art translation performance with reduced training time.",
     "source": "Attention_is_all_you_need.pdf",
     "difficulty": "medium",
     "max_min_relevance": [
       0.7187061011791229,
-      0.6513215899467468
+      0.676839679479599
     ],
-    "avg_relevance": 0.683,
+    "avg_relevance": 0.704,
     "accuracy": 0.0,
-    "coverage": 0.356,
-    "hallucination_score": 0.724,
+    "coverage": 0.392,
+    "hallucination_score": 0.769,
     "fluency": 1.0
   },
   {
     "id": 2,
     "query": "Why is self-attention preferred over recurrence in Transformers?",
     "expected_answer": "Self-attention enables parallelization and shorter path lengths for learning long-range dependencies, improving efficiency and scalability.",
-    "generated_answer": "Self-attention is favored in Transformers over recurrence due to its ability to model global dependencies efficiently with constant operations, enabling parallelization and improved computational efficiency compared to the sequential nature of recurrent layers.",
+    "generated_answer": "Self-attention is favored in Transformers over recurrence due to its ability to model global dependencies efficiently and enable parallelization, enhancing computational efficiency and performance for longer sequences.",
     "source": "Attention_is_all_you_need.pdf",
     "difficulty": "hard",
     "max_min_relevance": [
       0.7136554718017578,
-      0.6825177073478699
+      0.6896143555641174
     ],
-    "avg_relevance": 0.696,
+    "avg_relevance": 0.707,
     "accuracy": 0.0,
-    "coverage": 0.355,
-    "hallucination_score": 0.727,
+    "coverage": 0.398,
+    "hallucination_score": 0.889,
     "fluency": 1.0
   },
   {
     "id": 3,
     "query": "What is multi-head attention?",
     "expected_answer": "Multi-head attention allows the model to attend to information from different representation subspaces simultaneously.",
-    "generated_answer": "Multi-head attention allows a model to simultaneously attend to different representation subspaces by using multiple parallel attention layers, enhancing the capture of diverse input features while maintaining computational efficiency, as exemplified by the Transformer model's use of 8 parallel attention heads.",
+    "generated_answer": "Multi-head attention enhances a model's ability to capture diverse features and relationships by using multiple parallel attention heads to process input data simultaneously, with each head performing scaled dot-product attention independently before their outputs are combined, allowing for efficient and complex pattern understanding.",
     "source": "Attention_is_all_you_need.pdf",
     "difficulty": "medium",
     "max_min_relevance": [
       0.7446254789829254,
-      0.6510483026504517
+      0.6914040148258209
     ],
-    "avg_relevance": 0.694,
+    "avg_relevance": 0.716,
     "accuracy": 0.0,
-    "coverage": 0.451,
-    "hallucination_score": 0.769,
+    "coverage": 0.3,
+    "hallucination_score": 0.767,
     "fluency": 1.0
   },
   {
     "id": 4,
     "query": "What are the key obligations for providers of high-risk AI systems under the EU AI Act?",
     "expected_answer": "Providers must implement risk management, data governance, technical documentation, human oversight, and ensure accuracy and cybersecurity.",
-    "generated_answer": "Providers of high-risk AI systems under the EU AI Act must comply with specific requirements, undergo third-party assessments, ensure transparency, investigate systemic risks, complete impact assessments, register systems, and obtain necessary authorizations before deployment.",
+    "generated_answer": "Under the EU AI Act, providers of high-risk AI systems must undergo third-party conformity assessments for safety-related uses, comply with transparency obligations to inform end-users about AI interactions, and bear the majority of regulatory responsibilities when placing these systems on the market or into service.",
     "source": "EU AI Act Doc.docx",
     "difficulty": "hard",
     "max_min_relevance": [
       0.7792865037918091,
-      0.7331915199756622
+      0.7505369484424591
     ],
-    "avg_relevance": 0.756,
+    "avg_relevance": 0.769,
     "accuracy": 0.0,
-    "coverage": 0.322,
-    "hallucination_score": 0.609,
+    "coverage": 0.267,
+    "hallucination_score": 0.731,
     "fluency": 1.0
   },
   {
     "id": 5,
     "query": "What types of AI systems are prohibited under the EU AI Act?",
     "expected_answer": "Prohibited systems include those using manipulative techniques, social scoring, emotion inference in schools or workplaces, and untargeted facial recognition.",
-    "generated_answer": "The EU AI Act prohibits AI systems that use subliminal, manipulative, or deceptive methods to distort behavior and impair informed decision-making, causing significant harm.",
+    "generated_answer": "The EU AI Act prohibits AI systems that use subliminal, manipulative, or deceptive techniques to distort behavior and impair informed decision-making, causing significant harm.",
     "source": "EU AI Act Doc.docx",
     "difficulty": "hard",
     "max_min_relevance": [
-      0.7559357583522797,
-      0.6721813082695007
+      0.7557988464832306,
+      0.6950430870056152
     ],
-    "avg_relevance": 0.702,
+    "avg_relevance": 0.727,
     "accuracy": 0.0,
-    "coverage": 0.375,
-    "hallucination_score": 0.824,
+    "coverage": 0.449,
+    "hallucination_score": 0.882,
     "fluency": 1.0
   },
   {
     "id": 6,
     "query": "What is DeepSeek-R1-Zero and how is it trained?",
     "expected_answer": "DeepSeek-R1-Zero is a reasoning model trained purely via reinforcement learning without supervised fine-tuning.",
-    "generated_answer": "DeepSeek-R1-Zero, a first-generation reasoning model by DeepSeek-AI, is trained using large-scale reinforcement learning without supervised fine-tuning, enabling strong reasoning capabilities but struggling with readability and language mixing.",
+    "generated_answer": "DeepSeek-R1-Zero is a reasoning model developed through large-scale reinforcement learning without initial supervised fine-tuning, resulting in strong reasoning abilities but challenges with readability and language mixing.",
     "source": "New Text Document.txt",
     "difficulty": "medium",
     "max_min_relevance": [
       0.7499214112758636,
-      0.7191308736801147
+      0.7261743247509003
     ],
-    "avg_relevance": 0.732,
+    "avg_relevance": 0.74,
     "accuracy": 0.0,
-    "coverage": 0.569,
-    "hallucination_score": 0.667,
+    "coverage": 0.593,
+    "hallucination_score": 0.75,
     "fluency": 1.0
   },
   {
     "id": 7,
     "query": "How does DeepSeek-R1 improve upon DeepSeek-R1-Zero?",
     "expected_answer": "DeepSeek-R1 uses cold-start supervised data and multi-stage RL to enhance readability and reasoning performance.",
-    "generated_answer": "DeepSeek-R1 enhances DeepSeek-R1-Zero by using multi-stage training and high-quality cold-start data before reinforcement learning, improving readability, language consistency, and reasoning performance, achieving results comparable to OpenAI-o1-1217 across various tasks.",
+    "generated_answer": "DeepSeek-R1 enhances DeepSeek-R1-Zero by using multi-stage training and cold-start data prior to reinforcement learning, improving readability, language consistency, and reasoning performance.",
     "source": "New Text Document.txt",
     "difficulty": "hard",
     "max_min_relevance": [
-      0.7340927720069885,
-      0.7162899672985077
+      0.7344510853290558,
+      0.7309100329875946
     ],
-    "avg_relevance": 0.726,
+    "avg_relevance": 0.732,
     "accuracy": 0.0,
-    "coverage": 0.417,
-    "hallucination_score": 0.778,
+    "coverage": 0.553,
+    "hallucination_score": 0.737,
     "fluency": 1.0
   },
   {
     "id": 8,
     "query": "What is the role of cold-start data in DeepSeek-R1 training?",
     "expected_answer": "Cold-start data provides readable, structured reasoning examples that stabilize early RL training and improve model alignment.",
-    "generated_answer": "Cold-start data in DeepSeek-R1 training fine-tunes the initial model to stabilize early reinforcement learning, improve readability and performance, and enhance reasoning capabilities by providing a structured format and summary for Chains of Thought.",
+    "generated_answer": "Cold-start data in DeepSeek-R1 training is used to fine-tune the initial reinforcement learning actor, stabilizing the early training phase and enhancing the model's reasoning and general capabilities.",
     "source": "New Text Document.txt",
     "difficulty": "medium",
     "max_min_relevance": [
       0.812835693359375,
-      0.7182251513004303
+      0.7469004094600677
     ],
-    "avg_relevance": 0.758,
+    "avg_relevance": 0.783,
     "accuracy": 0.0,
-    "coverage": 0.414,
-    "hallucination_score": 0.56,
+    "coverage": 0.343,
+    "hallucination_score": 0.7,
     "fluency": 1.0
   },
   {
     "id": 9,
-    "query": "What benchmarks demonstrate DeepSeek-R1\u2019s performance?",
+    "query": "What benchmarks demonstrate DeepSeek-R1s performance?",
     "expected_answer": "DeepSeek-R1 achieves top scores on AIME, MATH-500, Codeforces, MMLU, and GPQA Diamond, rivaling OpenAI-o1-1217.",
-    "generated_answer": "DeepSeek-R1's performance is evaluated across multiple benchmarks such as MMLU, GPQA Diamond, SimpleQA, and others, showcasing its capabilities in various domains.",
+    "generated_answer": "DeepSeek-R1's performance is evaluated across multiple benchmarks such as MMLU, MMLU-Pro, GPQA Diamond, SimpleQA, IF-Eval, AlpacaEval2.0, and ArenaHard.",
     "source": "New Text Document.txt",
     "difficulty": "hard",
     "max_min_relevance": [
-      0.7478543519973755,
-      0.7292169332504272
+      0.7530543804168701,
+      0.7405767440795898
     ],
-    "avg_relevance": 0.737,
+    "avg_relevance": 0.747,
     "accuracy": 0.0,
-    "coverage": 0.394,
+    "coverage": 0.403,
     "hallucination_score": 0.769,
     "fluency": 1.0
   },
@@ -156,17 +156,17 @@
     "id": 10,
     "query": "What are the systemic risk obligations for GPAI providers under the EU AI Act?",
     "expected_answer": "Systemic GPAI providers must conduct evaluations, adversarial testing, incident tracking, and ensure cybersecurity.",
-    "generated_answer": "Under the EU AI Act, GPAI providers with systemic risk obligations must evaluate and mitigate systemic risks, conduct adversarial testing, report incidents promptly, and ensure cybersecurity protection.",
+    "generated_answer": "Under the EU AI Act, GPAI providers with systemic risk obligations must promptly notify the Commission of significant training activities, evaluate and mitigate systemic risks, report serious incidents, and ensure cybersecurity protection.",
     "source": "EU AI Act Doc.docx",
     "difficulty": "hard",
     "max_min_relevance": [
       0.7903430759906769,
-      0.7475700974464417
+      0.7698826938867569
     ],
-    "avg_relevance": 0.773,
+    "avg_relevance": 0.786,
     "accuracy": 0.0,
-    "coverage": 0.587,
-    "hallucination_score": 0.556,
+    "coverage": 0.458,
+    "hallucination_score": 0.55,
     "fluency": 1.0
   }
 ]

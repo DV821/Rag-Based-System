@@ -72,7 +72,12 @@ class RAGTester:
 
         embeddings = self.embedding_manager.generate_embeddings(texts)
         self.vector_store = VectorStore(collection_name="docs", persist_directory="vector_store")
-        self.vector_store.add_documents(chunks, embeddings)
+        if not self.vector_store.has_documents():
+            self.vector_store.add_documents(chunks, embeddings)
+            print('-------------Generating Docs-------------------')
+        else:
+            print('-------------Not Generating Docs-------------------')
+        # self.vector_store.add_documents(chunks, embeddings)
         self.retriever = RAGRetriever(self.vector_store, self.embedding_manager)
 
         if self.use_advanced:
@@ -96,7 +101,8 @@ class RAGTester:
                     stream=False,
                     summarize=True
                 )
-                answer = result["summary"]
+                answer = result["answer"]
+                # answer = result["summary"]
                 context = "\n\n".join([doc["preview"] for doc in result["sources"]])
                 relevance_scores = [doc["score"] for doc in result["sources"]]
             else:
