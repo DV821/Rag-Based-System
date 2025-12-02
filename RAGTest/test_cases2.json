@@ -57,7 +57,7 @@
   },
   {
     "id": 9,
-    "query": "What benchmarks demonstrate DeepSeek-R1’s performance?",
+    "query": "What benchmarks demonstrate DeepSeek-R1s performance?",
     "expected_answer": "DeepSeek-R1 achieves top scores on AIME, MATH-500, Codeforces, MMLU, and GPQA Diamond, rivaling OpenAI-o1-1217.",
     "source": "New Text Document.txt",
     "difficulty": "hard"

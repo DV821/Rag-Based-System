@@ -8,6 +8,7 @@ from src.RAGRetriever import RAGRetriever
 from src.llm import LLMManager
 from src.AdvancedRAGPipeline import AdvancedRAGPipeline
 from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 
 load_dotenv()
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
@@ -23,7 +24,7 @@ model_name = ['gpt-4o' if model == 'openai' else "llama-3.1-8b-instant"][0]
 use_advanced = st.sidebar.checkbox("Use AdvancedRAGPipeline", value=True)
 
 @st.cache_resource
-def initialize_pipeline(model, model_name, use_openai_embed = False):
+def initialize_pipeline(model, model_name, use_openai_embed = True):
     embedding_manager = EmbeddingManager(use_openai=use_openai_embed)
     vector_store = VectorStore(collection_name="docs", persist_directory="vector_store")
 
@@ -46,7 +47,10 @@ if st.button("Run RAG"):
     retriever, llm = initialize_pipeline(model, model_name)
 
     if use_advanced:
-        answer_llm = ChatOpenAI(model_name="gpt-4o", temperature=0.1, max_tokens=1024)
+        if model == 'openai':
+            answer_llm = ChatOpenAI(model_name=model_name, temperature=0.1, max_tokens=1024)
+        else:
+            answer_llm = ChatGroq(model_name=model_name, temperature=0.1, max_tokens=1024)
         pipeline = AdvancedRAGPipeline(retriever, answer_llm)
         result = pipeline.query(query, top_k=5, min_score=0.2, stream=False, summarize=True)
 
