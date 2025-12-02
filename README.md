@@ -85,7 +85,7 @@ Overall, testing results demonstrate robustness in generating accurate, relevant
 Further testing with hybrid retrieval and reranking methods is planned to enhance performance.
 
 ## Deployment
-Access the deployed web application at: [https://rag-based-system.streamlit.app/](https://rag-based-system.streamlit.app/)
+Access the deployed web application at: [https://rag-based-system-improved.streamlit.app/](https://rag-based-system-improved.streamlit.app/)
 
 ---
 
